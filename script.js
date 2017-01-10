@@ -10,6 +10,9 @@ var controller = (function($) {
 		
 		$getLocationButton.on('click', function() {
 			
+			$latitude.val(0);
+			$longitude.val(0);
+			
 			if(navigator.geolocation)
 			{
 				navigator.geolocation.getCurrentPosition(function(position) {
