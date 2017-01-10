@@ -10,16 +10,14 @@ var controller = (function($) {
 		
 		$getLocationButton.on('click', function() {
 			
-			function showPosition(position) {
-				
-				$latitude.val(position.coords.latitude);
-				$longitude.val(position.coords.longitude);
-				
-			}
-			
 			if(navigator.geolocation)
 			{
-				navigator.geolocation.getCurrentPosition(showPosition);
+				navigator.geolocation.getCurrentPosition(function(position) {
+					
+					$latitude.val(position.coords.latitude);
+					$longitude.val(position.coords.longitude);
+					
+				});
 			}
 			else
 			{
