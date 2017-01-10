@@ -62,11 +62,11 @@ html, body
 {
 	display: block;
 	width: 260px;
-	height: 32px;
 }
 
 .dataItem label
 {
+	height: 32px;
 	font-family: sans-serif;
 	font-size: 0.9em;
 	color: #5d5d5d;
@@ -75,12 +75,14 @@ html, body
 
 .dataItem input
 {
-	padding: 2px;
+	height: 40px;
+	padding: 3px;
 	font-family: sans-serif;
 	font-size: 1.2em;
 	font-weight: bold;
 	letter-spacing: 1px;
 	color: #2c2c2c;
+	border: 1px solid #dcdcdc;
 }
 
 .container #inputWrapper
