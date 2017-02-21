@@ -6,7 +6,7 @@ var controller = (function($) {
 		
 		var $latitude          = $('#latitude'),
 		    $longitude         = $('#longitude'),
-			$getLocationButton = $('#getLocationButton');
+		    $getLocationButton = $('#getLocationButton');
 		
 		$getLocationButton.on('click', function() {
 			
@@ -15,11 +15,9 @@ var controller = (function($) {
 			
 			if(navigator.geolocation)
 			{
-				navigator.geolocation.getCurrentPosition(function(position) {
-					
+				navigator.geolocation.getCurrentPosition(function(position) {			
 					$latitude.val(position.coords.latitude);
 					$longitude.val(position.coords.longitude);
-					
 				});
 			}
 			else
